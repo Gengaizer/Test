@@ -15,23 +15,23 @@ static int ArrayLength (string[] strings)
   return count;
 }
 
-string[] Count = new string[ArrayLength(strings)];
+string[] newStrings = new string[ArrayLength(strings)];
 
-void Array (string[] strings,string[] Count)
+void Array (string[] strings,string[] newStrings)
 {
-    int count = 0;
+    int count2 = 0;
     for(int i = 0; i < strings.Length; i++)
     {
         if(strings[i].Length <= 3)
         {
-            Count[count] = strings[i];
+            newStrings[count2] = strings[i];
            
-            count++;
+            count2++;
 
         }
     }
 }
 
 ArrayLength(strings);
-Array(strings, Count);
-Console.Write($"{string.Join(", ", Count)}");
+Array(strings, newStrings);
+Console.Write($"{string.Join(", ", newStrings)}");
